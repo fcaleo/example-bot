@@ -25,7 +25,8 @@ bot1 = Client(
 ###################################################################################################
 @bot1.on_message()
 async def message_handler(client: Client, message: Message):
-    await message.reply('hola')
+    if message.text == 'hi':
+        await message.reply('hola')
 
 ###################################################################################################
 # Main Loop
